@@ -24,10 +24,9 @@ export const Contact = () => {
     };
 
     emailjs.send(
-      process.env.REACT_APP_EMAILJS_SERVICEID, 
-      process.env.REACT_APP_EMAILJS_TEMPLATEID, 
-      templateParams,
-      process.env.REACT_APP_EMAILJS_USERID).then(
+      import.meta.env.VITE_REACT_APP_EMAILJS_SERVICEID, 
+      import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATEID, 
+      templateParams).then(
       (response) => {
         alert("Email sent successfully:", response);
       },
