@@ -24,9 +24,10 @@ export const Contact = () => {
     };
 
     emailjs.send(
-      process.env.REACT_APP_EMAILJS_USERID,
       process.env.REACT_APP_EMAILJS_SERVICEID, 
-      process.env.REACT_APP_EMAILJS_TEMPLATEID, templateParams).then(
+      process.env.REACT_APP_EMAILJS_TEMPLATEID, 
+      templateParams,
+      process.env.REACT_APP_EMAILJS_USERID).then(
       (response) => {
         alert("Email sent successfully:", response);
       },
