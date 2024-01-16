@@ -18,7 +18,7 @@ import ibmwatson from "../assets/ibm-watson.svg";
 import mysql from "../assets/mysql.svg";
 import django from "../assets/django.svg";
 import budget from "../assets/budget.png";
-import { minWidth } from "@mui/system";
+import carShow from "../assets/car-show.png";
 
 export const Projects = () => {
   return (
@@ -29,7 +29,62 @@ export const Projects = () => {
       <div className="projects" id="projects">
         <Card
           className="project"
-          sx={{ maxWidth: 345, marginLeft: "2em", minWidth: 280 }}
+          sx={{
+            maxWidth: 345,
+            marginRight: "2em",
+            marginLeft: "2em",
+            minWidth: 280,
+          }}
+        >
+          <CardHeader title="Car Show" subheader="Personal Project" />
+          <CardMedia
+            component="img"
+            height="194"
+            image={carShow}
+            alt="No Image Available"
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+              Currently a work in progress, this application will help job
+              seekers like myself tremendously in organizing the search process.
+              It keeps track of the status of the applications and takes record
+              of which part of the process in the current company the user is
+              at.
+            </Typography>
+            <Typography variant="h6" fontWeight="bold">
+              Technologies Used:
+            </Typography>
+            <Tooltip title="React.js" arrow>
+              <img className="tech-icons" src={react}></img>
+            </Tooltip>
+            <Tooltip title="JavaScript" arrow>
+              <img className="tech-icons" src={javascript}></img>
+            </Tooltip>
+          </CardContent>
+          <CardActions disableSpacing>
+            <Tooltip title="Source Code" arrow>
+              <Link target="_blank" href="https://github.com/yden-d/car-show">
+                <IconButton aria-label="github-link">
+                  <img
+                    src={github}
+                    alt="Github Icon"
+                    style={{ width: "1em" }}
+                  />
+                </IconButton>
+              </Link>
+            </Tooltip>
+            <Tooltip title="Live Demo" arrow>
+              <Link target="_blank" href="https://yden-d.github.io/car-show">
+                <IconButton aria-label="live-demo" sx={{ cursor: "pointer" }}>
+                  <ShareIcon />
+                </IconButton>
+              </Link>
+            </Tooltip>
+          </CardActions>
+        </Card>
+        <Card
+          className="project"
+          sx={{ maxWidth: 345, marginRight: "2em", minWidth: 280 }}
         >
           <CardHeader title="Expense Tracker" subheader="Personal Project" />
           <CardMedia
@@ -58,50 +113,11 @@ export const Projects = () => {
             </Tooltip>
           </CardContent>
           <CardActions disableSpacing>
-            <Link target="_blank" href="https://github.com/yden-d/react-budget">
-              <IconButton aria-label="github-link">
-                <img src={github} alt="Github Icon" style={{ width: "1em" }} />
-              </IconButton>
-            </Link>
-            <Tooltip title="Live site in progress" arrow>
-              <IconButton aria-label="live-demo">
-                <ShareIcon />
-              </IconButton>
-            </Tooltip>
-          </CardActions>
-        </Card>
-        <Card
-          className="project"
-          sx={{
-            maxWidth: 345,
-            marginRight: "2em",
-            marginLeft: "2em",
-            minWidth: 280,
-          }}
-        >
-          <CardHeader
-            title="Job Application Tracker"
-            subheader="Personal Project"
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image=""
-            alt="No Image Available (Yet)"
-          />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              Currently a work in progress, this application will help job
-              seekers like myself tremendously in organizing the search process.
-              It keeps track of the status of the applications and takes record
-              of which part of the process in the current company the user is
-              at.
-            </Typography>
-            <Typography variant="h6">Tech Stack:</Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-            <Tooltip title="Work in progress. Link coming soon!" arrow>
-              <Link>
+            <Tooltip title="Source Code">
+              <Link
+                target="_blank"
+                href="https://github.com/yden-d/react-budget"
+              >
                 <IconButton aria-label="github-link">
                   <img
                     src={github}
@@ -111,8 +127,8 @@ export const Projects = () => {
                 </IconButton>
               </Link>
             </Tooltip>
-            <Tooltip title="Work in progress. Link coming soon!" arrow>
-              <IconButton aria-label="share">
+            <Tooltip title="Live site in progress" arrow>
+              <IconButton aria-label="live-demo">
                 <ShareIcon />
               </IconButton>
             </Tooltip>
