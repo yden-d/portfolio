@@ -45,11 +45,9 @@ export const Projects = () => {
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
-              Currently a work in progress, this application will help job
-              seekers like myself tremendously in organizing the search process.
-              It keeps track of the status of the applications and takes record
-              of which part of the process in the current company the user is
-              at.
+              Currently a work in progress, this application is a true display of my frontend abilities.
+              It is a sample niche website for a scenario where the client needs a place to arrange and organize
+              car shows.
             </Typography>
             <Typography variant="h6" fontWeight="bold">
               Technologies Used:
