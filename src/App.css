@@ -61,6 +61,18 @@
   white-space: pre-wrap;
   padding: 10px;
   z-index: 1;
+  flex-direction: column;
+}
+
+.contact-btn {
+  background-color: grey;
+  border-radius: 10px;
+  padding: 0.5em;
+}
+
+.contact-btn:hover {
+  background-color: rgb(117, 117, 117);
+  cursor: pointer;
 }
 
 h3 {
@@ -85,6 +97,23 @@ h3 {
   justify-content: center;
   margin-bottom: 2em;
   z-index: 2;
+}
+
+@media (max-width: 800px) {
+  .projects {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project {
+    margin-bottom: 2em;
+  }
+
+  .code {
+    flex-wrap: wrap;
+    max-width: 200px;
+  }
 }
 
 .project {
